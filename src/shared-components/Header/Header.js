@@ -1,4 +1,6 @@
-import React, { Component } from "react";
+import React, { Component,useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {components} from "../../shared-components";
 
 import { connect } from "react-redux";
 import AuthActions from "../../models/auth";
@@ -12,9 +14,14 @@ class Header extends Component {
   };
 
   render() {
+
+    console.log(components)
+
+    const Login = components['login'];
+
     return (
       <div className="desktopNavbar">
-
+        <Login />
       </div>
     );
   }
@@ -28,3 +35,4 @@ const mapsStateToProps = (state) => ({
 export default connect(mapsStateToProps, { ...CommonActions, ...AuthActions })(
   Header
 );
+

@@ -5,11 +5,6 @@ const { Types, Creators } = createActions({
   authSuccess: ["user"],
   authFailure: ["error"],
   logOut: [],
-  getAccountInfo: [],
-  setAccountInfo: ["accountInfo"],
-  changeMenuAccount: ["menuAccountItem"],
-  changeSubMenuAccount: ["subMenuAccountItem"],
-  //
   setEmailOnLogin: ["emailOnLogin"],
 });
 
@@ -20,9 +15,7 @@ const INITIAL_STATE = {
   user: null,
   loading: false,
   error: null,
-  accountInfo: {},
   lastAccess: [],
-  personalInfo: {},
   isLoggedIn: "",
   isLoginModalOpen: false,
   password: [],
@@ -32,10 +25,6 @@ const INITIAL_STATE = {
 
 export const reducer = createReducer(INITIAL_STATE, {
   [Types.SIGN_IN_BY_EMAIL]: (state) => ({ ...state, loading: true }),
-  [Types.SET_ACCOUNT_INFO]: (state, { accountInfo }) => ({
-    ...state,
-    accountInfo,
-  }),
   [Types.SET_EMAIL_ON_LOGIN]: (state, { emailOnLogin }) => ({
     ...state,
     emailOnLogin,

@@ -18,10 +18,10 @@ if (
 }
 
 const eventHandler = (data, props) => {
-  if (data.PrematchNavbar) {
+  if (data.LeftNavbar) {
     //comes all navbar
-    props.updateNavBar(data.PrematchNavbar);
-  }
+
+}
 
 };
 
@@ -37,7 +37,7 @@ export const configureSocket = (props) => {
 
   window["echo"]
     .channel(`${laravelDb}_chat`)
-    .listen(".events", (e) => eventHandler(e.data, props));
+    .listen(".user", (e) => eventHandler(e.data, props));
 };
 
 

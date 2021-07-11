@@ -5,7 +5,7 @@ import {
   AuthActions,
   CommonActions,
 } from "./models";
-import { configureSocket } from "./services/socket";
+// import { configureSocket } from "./services/socket";
 import Router from "./navigation";
 // import {
 //   LoginModal,
@@ -39,9 +39,9 @@ class Root extends React.Component {
   }
 
   getStoredData = () => {
-    const accountData = sessionStorage.getItem("accountData");
+    // const accountData = sessionStorage.getItem("accountData");
 
-    const data = JSON.parse(accountData);
+    // const data = JSON.parse(accountData);
 
   };
 
@@ -52,7 +52,6 @@ class Root extends React.Component {
   render() {
     const {
       screenWidth,
-      isOpenLogin,
     } = this.props;
     let role = "";
 
@@ -67,7 +66,7 @@ class Root extends React.Component {
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
       this.props.setDevice("ios");
     }
-    const isMobile = screenWidth < 1025 && this.props.mobileCheck;
+    // const isMobile = screenWidth < 1025 && this.props.mobileCheck;
 
     return (
       <div className={`mainDiv`}>

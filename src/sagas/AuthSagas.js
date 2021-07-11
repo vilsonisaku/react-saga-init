@@ -1,10 +1,9 @@
-import { put, call, select, delay } from "redux-saga/effects";
+import { put, call, delay } from "redux-saga/effects";
 
 import AuthActions from "../models/auth";
 
 import {
   fetchLogin,
-  fetchAccountInfo,
   logoutApi,
 } from "../services/auth";
 
@@ -48,20 +47,6 @@ export function* signInByEmail(credencials) {
   }
 }
 
-export function* getAccountInfo() {
-  const response = yield call(fetchAccountInfo);
-  if (response) {
-    const accountData = sessionStorage.getItem("accountData");
-    const data = JSON.parse(accountData);
-    const updatedData = {
-      ...data,
-      account: response.data.account,
-    };
-
-    sessionStorage.setItem("accountData", JSON.stringify(updatedData));
-    yield put(AuthActions.setAccountInfo(updatedData));
-  }
-}
 
 export function* logOut() {
   const response = yield call(logoutApi);

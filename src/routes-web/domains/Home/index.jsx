@@ -11,7 +11,6 @@ class Home extends Component {
     document.body.classList.remove("respbody");
   }
   render() {
-    const { banners } = this.props;
     return (
       <div className="home">
         <div className="home--firstRow">
