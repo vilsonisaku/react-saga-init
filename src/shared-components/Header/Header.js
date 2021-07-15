@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import {components} from "../../shared-components";
 
 import { connect } from "react-redux";
-import AuthActions from "../../models/auth";
-import { CommonActions } from "../../models";
+import AuthActions from "../../redux-store/models/auth";
+import { CommonActions } from "../../redux-store/models";
 
 import "./header.css";
 

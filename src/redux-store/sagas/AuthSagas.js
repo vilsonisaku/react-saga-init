@@ -5,7 +5,7 @@ import AuthActions from "../models/auth";
 import {
   fetchLogin,
   logoutApi,
-} from "../services/auth";
+} from "../../services/auth";
 
 
 export function* signInByEmail(credencials) {

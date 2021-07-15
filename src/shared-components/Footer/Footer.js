@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./footer.css";
 import { connect } from "react-redux";
-import { CommonActions } from "../../models";
+import { CommonActions } from "../../redux-store/models";
 import { withRouter } from "react-router-dom";
 
 

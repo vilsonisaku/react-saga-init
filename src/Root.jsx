@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import {
   AuthActions,
   CommonActions,
-} from "./models";
+} from "./redux-store/models";
 // import { configureSocket } from "./services/socket";
 import Router from "./navigation";
 // import {

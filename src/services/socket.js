@@ -1,6 +1,6 @@
 import Echo from "laravel-echo";
 import { connect } from "react-redux";
-import AuthActions from "../models/auth";
+import AuthActions from "../redux-store/models/auth";
 import api from "../config/api";
 
 let laravelDb = "infosystem.loc";
